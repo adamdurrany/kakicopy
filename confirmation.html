@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - KAKICOPY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="confirmation.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Kakicopy_logo.png" alt="KAKICOPY Logo" class="logo">
+            <h1>KAKICOPY</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">SERVICES <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="printPage.html">Printing Services</a>
+                        <a href="nametag.html">Nametag Printing</a>
+                    </div>
+                </li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="confirmation-container">
+        <div class="confirmation-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1 class="confirmation-title">Thank You For Your Order!</h1>
+        <p>Your printing request has been received and is being processed.</p>
+        
+        <div class="confirmation-details">
+            <h3>Order Details</h3>
+            <p><strong>Order Number:</strong> <span class="order-number"></span></p>
+            <p><strong>Order Date:</strong> <span class="order-date"></span></p>
+            <p>We will notify you via email when your order is ready for pickup.</p>
+            <p>Estimated completion time: <strong>1-2 business days</strong></p>
+        </div>
+
+        <div class="order-summary">
+            <h3>Your Order</h3>
+            <div class="order-items" id="order-items">
+                
+            </div>
+            <div class="order-total">
+                <p>Total: <span class="total-amount"></span></p>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="home.html" class="btn">Back to Home</a>
+            <a href="#" class="btn btn-print" onclick="window.print()">Print Receipt</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>KAKICOPY provides high-quality printing services with fast turnaround times and competitive prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lot Cx-E-1, Kompleks Pusat, UIAM Kampus Gombak</p>
+                <p><i class="fas fa-phone"></i> +6011-5693 6562</p>
+                <p><i class="fas fa-envelope"></i> kakicopy.iium@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 KAKICOPY. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="confirmation.js"></script>
+</body>
+</html>

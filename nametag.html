@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKICOPY - Nametag Services</title>
+    <link rel="stylesheet" href="nametag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <header>
+  <div class="logo-container">
+    <img src="Kakicopy_logo.png" alt="KAKICOPY Logo" class="logo">
+    <h1>KAKICOPY</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="./home.html">Home</a></li>
+      <li class="dropdown">
+         <a href="#" class="dropbtn">SERVICES <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+            <a href="printPage.html">Printing Services</a>
+            <a href="nametag.html">Nametag Printing</a>
+            </div>
+      </li>
+      </li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="./contact.html">Contact us</a></li>
+      <li class="cart-link">
+        <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+        </a>
+    </li>
+    </ul>
+  </nav>
+  <div class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+    <main>
+        <section class="nametag-section">
+            <h2>NAMETAG PRINTING</h2>
+
+            <div class="tab-content active" id="NAMETAG">
+                <h3>NAMETAG PRINTING PRICES</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUANTITY</th>
+                            <th>A6</th>
+                            <th>A7</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-19 PCS</td>
+                            <td>RM 1.30</td>
+                            <td>RM 1.00</td>
+                        </tr>
+                        <tr>
+                            <td>20-50 PCS</td>
+                            <td>RM 1.00</td>
+                            <td>RM 0.90</td>
+                        </tr>
+                        <tr>
+                            <td>50 - ABOVE</td>
+                            <td>RM 0.90</td>
+                            <td>RM 0.70</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="options-container">
+                <div class="option-group">
+                    <h3>SIZE</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="size" value="A6" checked> A6</label>
+                        <label><input type="radio" name="size" value="A7"> A7</label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>QUANTITY</h3>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" type="button">-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" step="1">
+                        <button class="quantity-btn plus" type="button">+</button>
+                        <span class="quantity-label">PCS</span>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>ORIENTATION</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="orientation" value="portrait" checked> PORTRAIT</label>
+                        <label><input type="radio" name="orientation" value="landscape"> LANDSCAPE</label>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <button class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> UPLOAD YOUR FILE
+                    </button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn primary-btn add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="total-section">
+                    <h3>TOTAL</h3>
+                    <div class="total-amount">RM 0.00</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>KAKICOPY provides high-quality printing services with fast turnaround times and competitive prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lot Cx-E-1, Kompleks Pusat, UIAM Kampus Gombak</p>
+                <p><i class="fas fa-phone"></i> +6011-5693 6562</p>
+                <p><i class="fas fa-envelope"></i> kakicopy.iium@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 KAKICOPY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="nametag.js"></script>
+</body>
+</html>

@@ -18,21 +18,20 @@
     <ul class="nav-links">
       <li><a href="./home.html">Home</a></li>
       <li class="dropdown">
-        <a href="#services" class="dropbtn">Services ▾</a>
-        <ul class="dropdown-content">
-          <li><a href="./printPage.html">Printing</a></li>
-          <li><a href="./nametag.html">Nametag</a></li>
-          <li><a href="./photocopy.html">Photocopy</a></li>
-        </ul>
+         <a href="#" class="dropbtn">SERVICES <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+            <a href="printPage.html">Printing Services</a>
+            <a href="nametag.html">Nametag Printing</a>
+            </div>
       </li>
-      <li><a href="#about">About us</a></li>
+      </li>
       <li><a href="./contact.html">Contact us</a></li>
       <li class="cart-link">
-          <a href="cart.html">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-count" id="cart-count">0</span>
-          </a>
-     </li>
+        <a href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+        </a>
+    </li>
     </ul>
   </nav>
   <div class="mobile-menu-btn">
@@ -89,7 +88,6 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
         <li><a href="./contact.html">Contact Us</a></li>
       </ul>
     </div>
@@ -104,6 +102,82 @@
     <p>&copy; 2023 KAKICOPY. All Rights Reserved.</p>
   </div>
 </footer>
-
+<script>
+      (function() {
+    'use strict';
+    
+    // Initialize cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Function to update cart count display
+    function updateCartCount() {
+        const countElements = document.querySelectorAll('.cart-count');
+        countElements.forEach(element => {
+            if (element) {
+                element.textContent = cart.length;
+            }
+        });
+    }
+    
+    // Function to add item to cart
+    function addToCart(item) {
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to remove item from cart
+    function removeFromCart(itemId) {
+        cart = cart.filter(item => item.id !== itemId);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to get cart items
+    function getCartItems() {
+        return cart;
+    }
+    
+    // Function to clear cart
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to get cart total
+    function getCartTotal() {
+        return cart.reduce((total, item) => {
+            const price = parseFloat(item.price.replace('RM ', '')) || 0;
+            return total + price;
+        }, 0);
+    }
+    
+    // Update cart count when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartCount();
+        
+        // Listen for storage changes (when cart is updated in another tab)
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'cart') {
+                cart = JSON.parse(e.newValue) || [];
+                updateCartCount();
+            }
+        });
+    });
+    
+    // Make functions globally available
+    window.CartManager = {
+        addToCart: addToCart,
+        removeFromCart: removeFromCart,
+        getCartItems: getCartItems,
+        clearCart: clearCart,
+        getCartTotal: getCartTotal,
+        updateCartCount: updateCartCount
+    };
+</script>
 </body>
 </html>

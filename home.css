@@ -10,6 +10,17 @@ body {
   line-height: 1.6;
 }
 
+header, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Make content sections more transparent */
+.nametag-section, .option-group, .total-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+}
+
 /* Header Styles */
 header {
   background-color: #1a252f;
@@ -61,7 +72,7 @@ nav a.active {
   padding-bottom: 5px;
 }
 
-* Navigation Styles */
+/* Navigation Styles */
 nav ul {
     display: flex;
     list-style: none;
@@ -185,11 +196,34 @@ nav a.active,
     font-size: 12px;
 }
 
+
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .cart-btn {
         padding: 8px 12px;
     }
+}
+
+.total-section {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 6px;
+}
+
+.total-section h3 {
+    margin: 0;
+    color: white;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* Home Section */

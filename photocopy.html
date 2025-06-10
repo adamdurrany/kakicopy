@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAKICOPY - Photocopy Services</title>
-    <link rel="stylesheet" href="nametag.css">
+    <link rel="stylesheet" href="photocopy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -25,7 +25,6 @@
             </div>
       </li>
       </li>
-      <li><a href="#about">About us</a></li>
       <li><a href="./contact.html">Contact us</a></li>
       <li class="cart-link">
         <a href="cart.html">
@@ -73,17 +72,10 @@
                     </tbody>
                 </table>
             </div>
-
+                </div>
+            </div>
         </section>
     </main>
-              
-                  
-
-               
-
-              
-            
-        
 
     <footer>
         <div class="footer-content">
@@ -95,8 +87,6 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="./home.html">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -112,6 +102,85 @@
         </div>
     </footer>
 
-    <script src="nametag.js"></script>
+    <script>
+    (function() {
+    'use strict';
+    
+    // Initialize cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Function to update cart count display
+    function updateCartCount() {
+        const countElements = document.querySelectorAll('.cart-count');
+        countElements.forEach(element => {
+            if (element) {
+                element.textContent = cart.length;
+            }
+        });
+    }
+    
+    // Function to add item to cart
+    function addToCart(item) {
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to remove item from cart
+    function removeFromCart(itemId) {
+        cart = cart.filter(item => item.id !== itemId);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to get cart items
+    function getCartItems() {
+        return cart;
+    }
+    
+    // Function to clear cart
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        return true;
+    }
+    
+    // Function to get cart total
+    function getCartTotal() {
+        return cart.reduce((total, item) => {
+            const price = parseFloat(item.price.replace('RM ', '')) || 0;
+            return total + price;
+        }, 0);
+    }
+    
+    // Update cart count when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartCount();
+        
+        // Listen for storage changes (when cart is updated in another tab)
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'cart') {
+                cart = JSON.parse(e.newValue) || [];
+                updateCartCount();
+            }
+        });
+    });
+    
+    // Make functions globally available
+    window.CartManager = {
+        addToCart: addToCart,
+        removeFromCart: removeFromCart,
+        getCartItems: getCartItems,
+        clearCart: clearCart,
+        getCartTotal: getCartTotal,
+        updateCartCount: updateCartCount
+    };
+    
+})();;
+    
+    </script>
 </body>
 </html>

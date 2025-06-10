@@ -205,14 +205,14 @@ main {
     position: relative;
     z-index:1;
 }    
-.nametag-section {
+.photocopy-section {
     background-color: white;
     border-radius: 8px;
     padding: 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.nametag-section h2 {
+.photocopy-section h2 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;

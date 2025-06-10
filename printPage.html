@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKICOPY - Printing Services</title>
+    <link rel="stylesheet" href="printStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+  <div class="logo-container">
+    <img src="Kakicopy_logo.png" alt="KAKICOPY Logo" class="logo">
+    <h1>KAKICOPY</h1>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="./home.html">Home</a></li>
+      <li class="dropdown">
+         <a href="#" class="dropbtn">SERVICES <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+            <a href="printPage.html">Printing Services</a>
+            <a href="nametag.html">Nametag Printing</a>
+            </div>
+      </li>
+      </li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="./contact.html">Contact us</a></li>
+      <li class="cart-link">
+          <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+          </a>
+     </li>
+    </ul>
+  </nav>
+  <div class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+    <main>
+        <section class="printing-section">
+            <h2>PRINTING</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="BW">BLACK&WHITE</button>
+                <button class="tab-btn" data-tab="COLOR">COLOUR</button>
+            </div>
+
+            <div class="tab-content active" id="BW">
+                <h3>BLACK&WHITE PRINTING PRICES</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUANTITY</th>
+                            <th colspan="2">A4</th>
+                            <th colspan="2">A3</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>1 SIDE</th>
+                            <th>2 SIDE</th>
+                            <th>1 SIDE</th>
+                            <th>2 SIDE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-9 PCS</td>
+                            <td>RM 0.12</td>
+                            <td>RM 0.25</td>
+                            <td>RM 0.40</td>
+                            <td>RM 0.80</td>
+                        </tr>
+                        <tr>
+                            <td>10-49 PCS</td>
+                            <td>RM 0.10</td>
+                            <td>RM 0.20</td>
+                            <td>RM 0.30</td>
+                            <td>RM 0.80</td>
+                        </tr>
+                        <tr>
+                            <td>50-99 PCS</td>
+                            <td>RM 0.09</td>
+                            <td>RM 0.16</td>
+                            <td>RM 0.20</td>
+                            <td>RM 0.40</td>
+                        </tr>
+                        <tr>
+                            <td>100-499 PCS</td>
+                            <td>RM 0.08</td>
+                            <td>RM 0.14</td>
+                            <td>RM 0.15</td>
+                            <td>RM 0.30</td>
+                        </tr>
+                        <tr>
+                            <td>500 - ABOVE</td>
+                            <td>RM 0.07</td>
+                            <td>RM 0.12</td>
+                            <td>RM 0.12</td>
+                            <td>RM 0.20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-content" id="COLOR">
+                <h3>COLOUR PRINTING PRICES</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUANTITY</th>
+                            <th colspan="2">A4</th>
+                            <th colspan="2">A3</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>1 SIDE</th>
+                            <th>2 SIDE</th>
+                            <th>1 SIDE</th>
+                            <th>2 SIDE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-9 PCS</td>
+                            <td>RM 1.20</td>
+                            <td>RM 2.00</td>
+                            <td>RM 2.00</td>
+                            <td>RM 3.50</td>
+                        </tr>
+                        <tr>
+                            <td>10-49 PCS</td>
+                            <td>RM 1.00</td>
+                            <td>RM 1.80</td>
+                            <td>RM 1.80</td>
+                            <td>RM 3.00</td>
+                        </tr>
+                        <tr>
+                            <td>50-99 PCS</td>
+                            <td>RM 0.90</td>
+                            <td>RM 1.60</td>
+                            <td>RM 1.60</td>
+                            <td>RM 2.50</td>
+                        </tr>
+                        <tr>
+                            <td>100 - ABOVE</td>
+                            <td>RM 0.90</td>
+                            <td>RM 1.50</td>
+                            <td>RM 1.20</td>
+                            <td>RM 2.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="options-container">
+                <div class="option-group">
+                    <h3>SIZE</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="size" value="A4" checked> A4</label>
+                        <label><input type="radio" name="size" value="A3"> A3</label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>QUANTITY</h3>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" type="button">-</button>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" step="1">
+                        <button class="quantity-btn plus" type="button">+</button>
+                        <span class="quantity-label">PCS</span>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>ORIENTATION</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="orientation" value="portrait" checked> PORTRAIT</label>
+                        <label><input type="radio" name="orientation" value="landscape"> LANDSCAPE</label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>SIDE</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="side" value="1" checked> 1 SIDE</label>
+                        <label><input type="radio" name="side" value="2"> 2 SIDE</label>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>COLOUR</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="color" value="color" checked> COLOR</label>
+                        <label><input type="radio" name="color" value="bw"> BLACK & WHITE</label>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <button class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> UPLOAD YOUR FILE
+                    </button>
+                </div>
+
+                
+                <div class="action-buttons">
+                    <button class="btn primary-btn add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="total-section">
+                    <h3>TOTAL</h3>
+                    <div class="total-amount">RM 0.00</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>KAKICOPY provides high-quality printing services with fast turnaround times and competitive prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lot Cx-E-1, Kompleks Pusat, UIAM Kampus Gombak</p>
+                <p><i class="fas fa-phone"></i> +6011-5693 6562</p>
+                <p><i class="fas fa-envelope"></i> kakicopy.iium@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 KAKICOPY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="printcalc.js"></script>
+</body>
+</html>
